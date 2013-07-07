@@ -23,7 +23,7 @@ Extract the Ghostscript source into this repository, to create a folder such as 
 Open Terminal.app to that Ghostscript source directory, then run the build script:  
 ``../build-package.sh``
 
-The build script will download dependencies, configure and compile then and then compile Ghostscript.
+The build script will download dependencies, configure and compile them, and then compile Ghostscript.
 It also checks that the package does not have any depdendencies that won't work on other systems.
 
 The output files will be in the ``build`` directory.
