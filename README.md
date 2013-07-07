@@ -26,4 +26,7 @@ Open Terminal.app to that Ghostscript source directory, then run the build scrip
 The build script will download dependencies, configure and compile them, and then compile Ghostscript.
 It also checks that the package does not have any depdendencies that won't work on other systems.
 
+You will likely be prompted for your password during the build, as the script uses ``sudo`` to build into the
+``/opt/Ghostscript`` directory.
+
 The output files will be in the ``build`` directory.
