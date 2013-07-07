@@ -30,3 +30,7 @@ You will likely be prompted for your password during the build, as the script us
 ``/opt/Ghostscript`` directory.
 
 The output files will be in the ``build`` directory.
+
+After the build, Ghostscript will be installed in ``/opt/Ghostscript`` but will not have been added to your path.
+Install the package to create an entry in ``/etc/paths.d`` so it will be in your path. Note that you have to close
+and reopen any Terminal.app windows to get the new PATH environment variable.
