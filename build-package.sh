@@ -92,4 +92,6 @@ fi
 #mv "../../build/Ghostscript.pkg" "../../build/Ghostscript-$REV.pkg"
 /usr/bin/productsign --sign "Developer ID Installer" "../build/Ghostscript.pkg" "../build/Ghostscript-$REV.pkg"
 /bin/rm "../build/Ghostscript.pkg"
-/usr/bin/zip "../build/Ghostscript-$REV.pkg.zip" "../build/Ghostscript-$REV.pkg"
+pushd ../build
+/usr/bin/zip "Ghostscript-$REV.pkg.zip" "Ghostscript-$REV.pkg"
+popd
