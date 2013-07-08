@@ -82,6 +82,12 @@ sudo rm -rf /opt/Ghostscript && \
 make && \
 sudo make install
 
+otool -L /opt/Ghostscript/bin/gs | grep "/usr/local" > /dev/null
+if [ $? == 0 ]; then
+	echo "*** FAIL gs links to /usr/local"
+	exit 1
+fi
+
 /usr/local/bin/packagesbuild "${PACKAGE_CONFIG}"
 #mv "../../build/Ghostscript.pkg" "../../build/Ghostscript-$REV.pkg"
 /usr/bin/productsign --sign "Developer ID Installer" "../build/Ghostscript.pkg" "../build/Ghostscript-$REV.pkg"
